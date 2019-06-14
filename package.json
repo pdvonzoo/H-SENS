@@ -3,24 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@toast-ui/react-editor": "^1.0.0",
+    "apollo-boost": "^0.4.0",
+    "codemirror": "^5.46.0",
+    "dotenv": "^7.0.0",
+    "dotenv-expand": "^5.1.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.3",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.13.0",
+    "graphql": "^14.3.1",
+    "highlight.js": "^9.15.6",
     "react": "^16.8.6",
+    "react-apollo-hooks": "^0.4.5",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "styled-components": "^4.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "react-helmet": "^5.2.1",
+    "react-router-dom": "^5.0.0",
+    "react-scripts": "^3.0.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.86.0",
+    "styled-components": "^4.2.0",
+    "tui-editor": "^1.4.0",
+    "use-react-router": "^1.0.7"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "heroku-postbuild": "npm run build"
+  }
 }

@@ -1,18 +1,30 @@
-import React, { Component } from 'react';
-import List from "./List.jsx";
-import Author from "./Author.jsx";
-import Header from './header.js'
+import React from 'react';
+import { gql } from 'apollo-boost';
+import { useQuery } from 'react-apollo-hooks';
+import AppPath from './router/router';
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Header />
-        <Author />
-        <List />
-      </>
-    );
+const dotenv = require('dotenv');
+const dotenvExpand = require('dotenv-expand');
+
+const myEnv = dotenv.config();
+dotenvExpand(myEnv);
+
+const QUERY = gql`
+  {
+    isLoggedIn @client
   }
-}
+`;
+
+const App = () => {
+  const {
+    data: { isLoggedIn },
+  } = useQuery(QUERY);
+
+  return (
+    <>
+      <AppPath isLoggedIn={isLoggedIn} />
+    </>
+  );
+};
 
 export default App;
